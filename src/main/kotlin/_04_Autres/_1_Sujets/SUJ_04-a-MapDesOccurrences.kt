@@ -19,7 +19,18 @@ import _10_Demos_et_tests.testerEnLot
 fun mapDesOccurrences(liste: List<Int>): Map<Int, Int> {
     val resultat = mutableMapOf<Int, Int>()
 
-    // A COMPLETER ICI
+    var i = 0
+    while(i< listeCopie.size){
+        val element=listeCopie[i]
+        var j=i+1
+        while (j< listeCopie.size){
+            if (listeCopie[j]== element){
+                listeCopie.removeAt(j)
+            }else{
+                j++
+            }
+        }
+        i++
 
     return resultat
 }

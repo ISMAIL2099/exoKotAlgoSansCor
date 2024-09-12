@@ -3,6 +3,7 @@ package _01_Les_basiques._1_Sujets
 import _10_Demos_et_tests.DataTestMoyennePonderee
 import _10_Demos_et_tests.demoEnLot
 import _10_Demos_et_tests.testerEnLot
+import kotlin.reflect.typeOf
 
 
 /* -----------------------
@@ -18,7 +19,13 @@ import _10_Demos_et_tests.testerEnLot
  */
 fun moyennePonderee(listeCoefVal: List<List<Number>>): Double {
     var moyenne = 0.0
-    // A COMPLETER ICI
+    var div=0.0
+    for(i in listeCoefVal.indices){
+        moyenne+=listeCoefVal[i][0].toFloat() * listeCoefVal[i][1].toFloat()
+        div += listeCoefVal[i][0].toFloat()
+
+    }
+    moyenne=moyenne/div
     return moyenne
 }
 

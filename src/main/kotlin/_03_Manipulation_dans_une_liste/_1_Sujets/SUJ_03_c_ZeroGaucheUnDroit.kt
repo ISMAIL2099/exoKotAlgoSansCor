@@ -18,7 +18,15 @@ import _10_Demos_et_tests.testerEnLot
 fun zeroGaucheUnDroit(liste: List<Int>): MutableList<Int> {
     val copieListe = liste.toMutableList()
 
-    // A COMPLETER ICI
+    for (i in copieListe.indices){
+        if (copieListe[i]==1) {
+            copieListe.addLast(copieListe[i])
+            copieListe.remove(copieListe[i])
+        }
+    }
+    println(copieListe)
+
+    // copieListe.sort() je pourrait le faire si j'ai la flemme
 
     return copieListe
 }
