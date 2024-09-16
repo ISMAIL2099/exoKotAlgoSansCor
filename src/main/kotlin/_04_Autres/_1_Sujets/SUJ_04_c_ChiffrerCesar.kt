@@ -20,8 +20,18 @@ import _10_Demos_et_tests.testerEnLot
 fun chiffrerCesar(cle: Int, message: String): String {
     var messageCesar = ""
 
-    // A COMPLETER ICI
+    val alphabet= ('a'..'z').toList()
 
+    for(i in message.indices){
+        var lettre=message[i]
+        for (f in alphabet.indices){
+            if (lettre== alphabet[f]){
+                lettre=alphabet[f+cle]
+            }
+        }
+        messageCesar+=lettre
+    }
+    println(messageCesar)
     return messageCesar
 }
 
